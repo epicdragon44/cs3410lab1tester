@@ -18,16 +18,25 @@ const Home: NextPage = () => {
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    Welcome to my <a href='#'>CS3410 Lab1 Tester</a>
+                    Welcome to my{" "}
+                    <a href='' className='font-bold'>
+                        CS3410 Lab1 Tester
+                    </a>
                 </h1>
 
                 <p className={styles.description}>
-                    Made by <a href='http://danielwei.me/'>Daniel Wei</a>
+                    Made by{" "}
+                    <a
+                        href='http://danielwei.me/'
+                        className='font-bold underline'
+                    >
+                        Daniel Wei
+                    </a>
                 </p>
 
                 <div className={styles.grid}>
                     <Link href='/adder' className={styles.card}>
-                        <a href='#' className={styles.card}>
+                        <a href='' className={styles.card}>
                             <h2>Test Add32 &rarr;</h2>
                             <p>
                                 32-bit adder for signed two's complement
@@ -37,14 +46,14 @@ const Home: NextPage = () => {
                     </Link>
 
                     <Link href='/leftshifter' className={styles.card}>
-                        <a href='#' className={styles.card}>
+                        <a href='' className={styles.card}>
                             <h2>Test LeftShift32 &rarr;</h2>
                             <p>32-bit logical left-shifter</p>
                         </a>
                     </Link>
 
                     <Link href='/alu' className={styles.card}>
-                        <a href='#' className={styles.card}>
+                        <a href='' className={styles.card}>
                             <h2>Test ALU &rarr;</h2>
                             <p>32-bit ALU</p>
                         </a>

@@ -12,6 +12,12 @@
     align-items: center;
 }
 
+.notmain {
+    min-height: 100vh;
+    padding: 4rem 0;
+    text-align: left;
+}
+
 .footer {
     display: flex;
     flex: 1;
@@ -57,11 +63,12 @@
 }
 
 .code {
-    background: #fafafa;
     border-radius: 5px;
     padding: 0.75rem;
     white-space: pre-wrap;
     font-size: 15px;
+    line-height: 2em;
+    text-align: left;
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
         DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }

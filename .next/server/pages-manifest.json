@@ -3,5 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/adder": "pages/adder.js",
-  "/": "pages/index.js"
+  "/leftshifter": "pages/leftshifter.js",
+  "/": "pages/index.js",
+  "/alu": "pages/alu.js"
 }

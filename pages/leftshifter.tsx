@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import React from "react";
 import RandomUtils from "../libs/random";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const LeftShifter: NextPage = () => {
     // constants
@@ -75,14 +76,24 @@ const LeftShifter: NextPage = () => {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <main className={styles.main}>
+            <main className={styles.notmain}>
                 <h1 className={styles.title}>
-                    <a href='#' onClick={generate}>
+                    <a onClick={generate} className='hover:cursor-pointer'>
                         Generate Test Case{" "}
                     </a>{" "}
                     for LeftShift32
                 </h1>
-
+                <br />
+                <br />
+                <CopyToClipboard text={testCases}>
+                    <button className='bg-blue-600 text-white text-sm leading-6 font-medium py-2 px-5 rounded-lg'>
+                        Copy to Clipboard
+                    </button>
+                </CopyToClipboard>
+                <br />
+                <br />
+                <hr />
+                <br />
                 <code className={styles.code}>{testCases}</code>
             </main>
         </div>
