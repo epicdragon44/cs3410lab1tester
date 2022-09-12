@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/alu": "pages/alu.js",
   "/adder": "pages/adder.js",
-  "/leftshifter": "pages/leftshifter.js",
-  "/": "pages/index.js",
-  "/alu": "pages/alu.js"
+  "/": "pages/index.js"
 }
