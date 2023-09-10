@@ -40,7 +40,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "0101";
+        let Op = "0000";
         let V = 0;
 
         // Run the operation
@@ -55,7 +55,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "0100";
+        let Op = "0001";
         let V = 0;
         let C = A | B;
 
@@ -67,7 +67,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "0010";
+        let Op = "1101";
         let V = 0;
         let C = A ^ B;
 
@@ -79,9 +79,9 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "0011";
+        let Op = "1111";
         let V = 0;
-        let C = ~(A | B);
+        let C = !(A && B);
 
         let line = Op + " " + A + " " + B + " " + Sa + " " + C + " " + V;
         return line;
@@ -116,7 +116,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = Math.random() > 0.5 ? "1001" : "1000";
+        let Op = Math.random() > 0.5 ? "1010" : "1011";
         let V = 0;
         let C = B << Sa;
 
@@ -128,7 +128,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "1100";
+        let Op = Math.random() > 0.5 ? "0100" : "0101";
         let V = 0;
         let C = B >>> Sa;
 
@@ -140,7 +140,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "1101";
+        let Op = Math.random() > 0.5 ? "0110" : "0111";
         let V = 0;
         let C = B >> Sa;
 
@@ -155,7 +155,7 @@ const ALU: NextPage = () => {
         let Bstr = B.toString(2).padStart(32, "0");
 
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "0000";
+        let Op = "1000";
 
         let V = 0;
 
@@ -172,7 +172,7 @@ const ALU: NextPage = () => {
         let Bstr = B.toString(2).padStart(32, "0");
 
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "0001";
+        let Op = "1001";
 
         let V = 0;
 
@@ -200,7 +200,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = "1111";
+        let Op = "1100";
         let V = 0;
         let C = A > 0 ? 1 : 0;
 
@@ -212,7 +212,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = Math.random() > 0.5 ? "0110" : "0111";
+        let Op = "0011";
         let C = A + B;
 
         // V stores the overflow bit
@@ -226,7 +226,7 @@ const ALU: NextPage = () => {
         let A = RandomUtils.randomInt(-2147483648, 2147483647);
         let B = RandomUtils.randomInt(-2147483648, 2147483647);
         let Sa = RandomUtils.randomInt(0, 31);
-        let Op = Math.random() > 0.5 ? "1010" : "1011";
+        let Op = "0010";
         let C = A - B;
 
         // V stores the overflow bit
