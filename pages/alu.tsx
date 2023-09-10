@@ -21,15 +21,19 @@ const ALU: NextPage = () => {
         "\n#        The last few lines at the end are carefully-generated edge cases that conform to specific use cases." +
         "\n#        In this case, it tests logical and arithmetic right shifts.";
 
-    let randConst1 = RandomUtils.randomInt(0, 2 ** 32 - 1);
+    let randConst1 = RandomUtils.randomInt(0, 2 ** 31 - 1);
     let randConst2 = RandomUtils.randomInt(0, 2 ** 32 - 1);
     let randConst3 = RandomUtils.randomInt(0, 2 ** 32 - 1);
     let randConst4 = RandomUtils.randomInt(0, 2 ** 32 - 1);
     const edge_cases = [
-        `1100 0 ${randConst1} 31 0 0`,
-        "1101 0 -649986865 31 4294967295 0",
-        `1100 0 ${randConst3} 0 ${randConst3} 0`,
-        `1101 0 ${randConst4} 0 ${randConst4} 0`,
+        `0100 0 ${randConst1} 31 0 0`,
+        `0101 0 ${randConst1} 31 0 0`,
+        `0100 0 ${randConst3} 0 ${randConst3} 0`,
+        `0101 0 ${randConst3} 0 ${randConst3} 0`,
+        `0110 0 -649986865 31 4294967295 0`,
+        `0111 0 -649986865 31 4294967295 0`,
+        `0110 0 ${randConst4} 0 ${randConst4} 0`,
+        `0111 0 ${randConst4} 0 ${randConst4} 0`,
     ];
 
     // hook to display the generated test file
@@ -81,7 +85,7 @@ const ALU: NextPage = () => {
         let Sa = RandomUtils.randomInt(0, 31);
         let Op = "1111";
         let V = 0;
-        let C = !(A && B);
+        let C = ~(A & B);
 
         let line = Op + " " + A + " " + B + " " + Sa + " " + C + " " + V;
         return line;
